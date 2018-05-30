@@ -1,0 +1,64 @@
+<nav  class="minav">
+  <img src="assets/logocacao.png" style="margin-left:10px;" />
+</nav>
+<div class="container-fluid">
+     
+  <div class="row contenedor-principal">
+        <img src="assets/fincas.png"  class="img-fluid imagen-principal" />
+        <div class="offset-1 col-6 carta-principal " style="margin-top:60px;">
+                  <div class="row " style="margin-top:10px;">
+                        <div class="col-12 text-center">
+                              <p class="t_social">Mirada Social</p>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-12 text-center">
+                             <p class="t_productiva"> y productiva a la</p>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-12 text-center">
+                              <p class="t_cacao">CacaoCultura</p>
+                        </div>
+                        <div class="w-100">
+                            
+                        </div>
+                        <div class="col-12 text-center">
+                              <p class="t_sub">de <strong class="sub">Mesetas</strong> y <strong class="sub">Vistahermosa</strong>, <a>Meta</a></p>
+                        </div>
+                  </div>
+                 
+        </div>
+     
+  </div>
+    <div class="row row-center fincas">
+          <div class="col- carta" *ngFor="let i of lista">
+              <div class="row">
+                    <div class="col-12 imagen-carta" (click)="DetalleFinca(i)">
+                           <img [src]="i.imagen_finca" class="imagen" />
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-12 titulo-carta text-center" (click)="Activar(i)">
+                          <p class="titulo">{{i.nombre_finca}}</p>
+                    </div>
+                    <div class="col-12 contenido-carta text-left" [@ampliar]="i.activo" >
+                            <div class="row">
+                                  <div class="col-12">
+                                         Departamento: {{i.nombre_departamento}}
+                                         <br>
+                                         Municipios: {{i.nombre_municipio}}
+                                         <br>
+                                         Ubicación
+                                  </div>
+
+                            </div>   
+                            <div class="row" style="display:flex; justify-content:flex-end;">
+                                     <button class="btn miboton">Saber Más</button>
+                            </div>
+                           
+                    </div>
+              </div>
+            
+          </div>
+    </div>
+    <img src="assets/cacaofondo.png"  class="img-fluid imagen-a" />
+</div>
+

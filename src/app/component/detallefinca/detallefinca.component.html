@@ -1,0 +1,139 @@
+<nav  class="minav">
+    <img src="assets/logocacao.png" style="margin-left:10px;" />
+  </nav>
+
+  <div class="container-fluid">
+        <img src="assets/fincas.png"  class="img-fluid imagen-principal" />
+      <div class="row contenedor-principal">
+            <div class="offset-1 col-6 carta-principal " style="margin-top:60px;">        
+                    <iframe *ngIf="urlSanada" class="video" [src]="urlSanada">
+                    </iframe>
+            </div>
+      </div>
+      <div class="row cont-center contenedor-menu"> 
+           <div class="col- contenedor-submenu " *ngFor="let i of info"  >   
+                  <img [src]="i.imagen"  class="img-icon" />
+                   <div class="contenedor-subm">  
+                   </div>
+                   <p class="title text-center "> {{i.titulo}} </p>
+           </div>
+      </div>
+      <div class="row terreno" *ngIf="finca">
+          <div class="offset-1 col-10 text-center cont-titulo">
+              {{this.finca.nombre_finca}}
+          </div>
+          <div class="w-100"></div>
+          <div class="offset-1 col-10" style="height:400px;background-color:white;margin-top:20px;">
+                <div class="row">
+                    <div class="col-5">
+
+                    </div>
+                    <div class="col-7">
+                        <img src="assets/suelo.png" class="img-fluid" style="height:400px" />
+                    </div>
+                </div>
+          </div>
+      </div>
+      <div class="row " id="HISTORIA" *ngIf="finca">
+          <div class="offset-1 col-5 text-center">
+                <img [src]="finca.imagen_finca" class="img-fluid img" />
+          </div>
+          <div class="col-5">
+               <div class="row">
+                   <div class="col-12 H_INFO text-center">
+                        <div class="row cont-center">
+                            <div class="col-10 H_SUB" >
+                                     HISTORIA
+                            </div>
+                            
+                        </div>
+                   </div>
+                   <div class="w-100"></div>
+                   <div  class="col-12 contenido-texto text-justify" [innerHTML]="finca.historia">
+                    </div>
+                    <img src="assets/personas.png"  class="imagen-icon2 img-fluid"/>
+               </div>
+          </div>
+      </div>
+      <div class="row" id="CACAO" *ngIf="finca">
+              <div class="col-6 izquierdo text-left">
+                 <p class="t_cacao"> CACAO <br>EN LA FINCA</p>
+                    <img src="assets/cacao.png" class="img-fluid imagen-abajo " style="float: right;" />
+              </div>
+              <div class="col-6 derecho"> 
+                     <div class="row" style="margin-top:60px;
+                     margin-bottom: 20px;">
+                         <div class="offset-1 col-10 text-justify" [innerHTML]="finca.cacao">
+                         </div>
+                     </div>
+              </div>
+      </div>
+      <div class="row " id="SUELO" *ngIf="finca">
+            <div class="offset-1 col-5 text-center">
+                  <img [src]="finca.imagen_finca" class="img-fluid img" />
+            </div>
+            <div class="col-5">
+                 <div class="row">
+                     <div class="col-12 H_INFO text-center">
+                          <div class="row cont-center">
+                              <div class="col-10 H_SUB" >
+                                       SUELO
+                              </div>
+                              
+                          </div>
+                     </div>
+                     <div class="w-100"></div>
+                     <div  class="col-12 contenido-texto text-justify" [innerHTML]="finca.suelo">
+                      </div>
+                      <img src="assets/suelo.png"  class="imagen-icon2 img-fluid"/>
+                 </div>
+            </div>
+            
+        </div>
+        <div class="row" id="ESTRUCTURA" *ngIf="finca">
+                <div class="col-6 izquierdo text-left">
+                   <p class="t_cacao"> ESTRUCTURA</p>
+                     
+                </div>
+                <div class="col-6 derecho"> 
+                       <div class="row" style="margin-top:60px;
+                       margin-bottom: 20px;">
+                           <div class="offset-1 col-10 text-justify" [innerHTML]="finca.estructura">
+                           </div>
+                       </div>
+                </div>
+        </div>
+        <div class="row " id="PERFIL" *ngIf="finca" style="margin-top:40px;">
+                
+                <div class="offset-6 col-5">
+                     <div class="row">
+                         <div class="col-12 H_INFO text-center">
+                              <div class="row cont-center">
+                                  <div class="col-10 H_SUB" >
+                                          PERFIL SENSORIAL
+                                  </div>
+                                  
+                              </div>
+                         </div>
+                         <div class="w-100"></div>
+                         <div  class="col-12 contenido-texto text-justify" [innerHTML]="finca.historia">
+                          </div>
+                          <img src="assets/perfilsensorial.png"  class="imagen-icon2 img-fluid"/>
+                     </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="offset-1 col-10">
+                        <div class="row" *ngFor="let i of info">
+                                <div class="col-6"  class="cont-img">
+                                      <img src="assets/fincas.png"class="img-fluid img-sub" />
+                                </div>
+                                <div class="col-6 cont-perfil" [innerHTML]="i.titulo">
+                                    Texto Falso
+                                </div>
+                          </div>
+                </div>
+            </div>
+        <img src="assets/cacaofondo.png"  class="img-fluid imagen-a" />
+    </div>
+    
+    

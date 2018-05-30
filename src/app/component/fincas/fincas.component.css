@@ -1,0 +1,109 @@
+.carta{
+    height: auto;
+     width: 300px;
+
+     margin-left:100px;
+     margin-top:15px;
+}
+
+.imagen-carta{
+height: auto;
+padding:0;
+}
+.titulo-carta{
+background-color:#CE6D33;
+font-weight: bold;
+color:white;
+height: auto;
+}
+.titulo{
+     margin-top:10px;
+}
+.contenido-carta{
+ background-color:white;   
+ width: 100%; 
+}
+
+.miboton{
+     margin-right: 5px;
+     margin-bottom: 5px;
+}
+
+.imagen{
+     height: 200px;
+     width: 100%;
+}
+
+.imagen-a{
+   
+   float: right;
+    height: 300px;
+    width: 300px;
+}
+.imagen-principal{
+    width: 100%;
+    position: absolute;
+    height: 500px;
+}
+.minav{
+ background-color:#D37649;
+ height: 80px;     
+}
+
+.carta-principal{
+     height: 250px;
+     width: 300px;
+     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+background-color:white;
+}
+
+.fincas{
+     margin-top:80px;
+}
+
+.contenedor-principal{
+
+     background-image: url('assets/fincas.png');
+     background-size: cover;
+     height: 400px;
+
+}
+
+.t_social{
+    color:#44A09B;
+    font-weight: bold;
+    font-size:4em;
+    margin:0;
+    line-height: 0.8;
+    margin-top:15px;
+}
+
+.t_productiva{
+    color:#44A09B;
+    font-size:3em;
+    margin: 0;
+    line-height: 0.8;
+}
+.t_cacao{
+    color:#D1793C;
+    font-size:4em;
+    margin: 0;
+    line-height: 0.8;
+    margin-top:6px;
+}
+
+.sub{
+    color:#44A09B !important;
+}
+
+.t_sub{
+    color:#1B5B54;
+    font-size:1.5em;
+}
+
+.t_sub a{
+    color:#CE6D33;
+}
+

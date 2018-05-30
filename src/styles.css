@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.row-center{
+    display: flex;
+    justify-content:left;
+}
+
+html,body{
+    background-color:#E9E9E4;
+}
