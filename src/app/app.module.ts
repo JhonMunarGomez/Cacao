@@ -18,8 +18,8 @@ import {AppRoutingModule} from './app-routing.module';
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    BrowserModule
-  ],
+    BrowserModule,
+     ],
   providers: [Finca],
   bootstrap: [AppComponent]
 })

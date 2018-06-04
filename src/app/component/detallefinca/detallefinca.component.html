@@ -1,8 +1,12 @@
+
+
 <nav  class="minav">
-    <img src="assets/logocacao.png" style="margin-left:10px;" />
+    <img src="assets/logocacao.png" style="margin-left:10px;" (click)="Inicio()" />
   </nav>
 
   <div class="container-fluid">
+
+  
         <img src="assets/fincas.png"  class="img-fluid imagen-principal" />
       <div class="row contenedor-principal">
             <div class="offset-1 col-6 carta-principal " style="margin-top:60px;">        
@@ -11,12 +15,12 @@
             </div>
       </div>
       <div class="row cont-center contenedor-menu"> 
-           <div class="col- contenedor-submenu " *ngFor="let i of info"  >   
+           <a class="col- contenedor-submenu " *ngFor="let i of info"    [attr.id]="'myButton'+i.codigo"  (click)="IrSeccion(i)"  >   
                   <img [src]="i.imagen"  class="img-icon" />
                    <div class="contenedor-subm">  
                    </div>
                    <p class="title text-center "> {{i.titulo}} </p>
-           </div>
+                </a>
       </div>
       <div class="row terreno" *ngIf="finca">
           <div class="offset-1 col-10 text-center cont-titulo">
@@ -34,7 +38,11 @@
                 </div>
           </div>
       </div>
-      <div class="row " id="HISTORIA" *ngIf="finca">
+    
+      <div  id="rerun-button" (click)="IrAlPrincipio(1000)" class="boton-return"  style="position:sticky;top: 5px;">
+            <i class="fas fa-home"></i>
+      </div>
+      <div class="row " id="HISTORIA" name="HISTORIA" *ngIf="finca">
           <div class="offset-1 col-5 text-center">
                 <img [src]="finca.imagen_finca" class="img-fluid img" />
           </div>
