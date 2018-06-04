@@ -27,13 +27,50 @@
               {{this.finca.nombre_finca}}
           </div>
           <div class="w-100"></div>
-          <div class="offset-1 col-10" style="height:400px;background-color:white;margin-top:20px;">
+          <div class="offset-1 col-10" style="height:auto;background-color:white;margin-top:20px;">
                 <div class="row">
-                    <div class="col-5">
-
+                    <div class="col-4" style="margin-left:10px;">
+                        <div class="row">
+                            <div class="col-12 text-center t_finca">
+                                {{finca.nombre_finca}}
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-12 carta-info">
+                               <div class="row ">
+                                   <div class="col-12 text-center t_entrada">
+                                         Entradas
+                                   </div>
+                                   <div class="w-100"></div>
+                                   <div class="col-4 cont-producto" *ngFor="let i of entrada" style="margin-top:5px;">
+                                        <div class="row t_producto">
+                                            {{i.nombre_producto}}
+                                        </div>
+                                        <div class="row t_d_producto" [innerHTML]="i.descripcion"></div>
+                                   </div>
+                               </div>
+                            </div>
+                            <div class="w-100">
+                                
+                            </div>
+                            <div class="col-12 carta-info" style="margin-top:20px;">
+                                <div class="row ">
+                                    <div class="col-12 text-center t_entrada">
+                                        Salidas
+                                    </div>
+                                    <div class="w-100"></div>
+                                   
+                                    <div class="col-4 cont-producto" *ngFor="let i of salida" >
+                                         <div class="row t_producto">
+                                             {{i.nombre_producto}}
+                                         </div>
+                                         <div class="row t_d_producto" [innerHTML]="i.descripcion"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-7">
-                        <img src="assets/suelo.png" class="img-fluid" style="height:400px" />
+                        <img [src]="finca.diseno_finca"  style="height:600px;width:100%" />
                     </div>
                 </div>
           </div>
@@ -111,7 +148,7 @@
                        </div>
                 </div>
         </div>
-        <div class="row " id="PERFIL" *ngIf="finca" style="margin-top:40px;">
+        <div class="row " id="PERFIL" *ngIf="perfil&&finca" style="margin-top:40px;">
                 
                 <div class="offset-6 col-5">
                      <div class="row">
@@ -124,19 +161,19 @@
                               </div>
                          </div>
                          <div class="w-100"></div>
-                         <div  class="col-12 contenido-texto text-justify" [innerHTML]="finca.historia">
+                         <div  class="col-12 contenido-texto text-justify" [innerHTML]="finca.perfil_sensorial">
                           </div>
                           <img src="assets/perfilsensorial.png"  class="imagen-icon2 img-fluid"/>
                      </div>
                 </div>
                 <div class="w-100"></div>
-                <div class="offset-1 col-10">
-                        <div class="row" *ngFor="let i of info">
-                                <div class="col-6"  class="cont-img">
-                                      <img src="assets/fincas.png"class="img-fluid img-sub" />
+                <div class="col-12" *ngIf="perfil">
+                        <div class="row cont-center" *ngFor="let i of perfil" style="margin-top:10px;" >
+                                <div class="col-"  class="cont-img">
+                                      <img [src]="i.imagen_perfil"class="img-fluid img-sub" />
                                 </div>
-                                <div class="col-6 cont-perfil" [innerHTML]="i.titulo">
-                                    Texto Falso
+                                <div class="col cont-perfil" [innerHTML]="i.descripcion">
+                                    
                                 </div>
                           </div>
                 </div>

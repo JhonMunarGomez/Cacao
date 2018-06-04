@@ -138,6 +138,9 @@
    background-color:#8CBFAA;
    margin-top:10px;
    margin-bottom:10px;
+   font-size:1.5em;
+   color:white;
+   text-align: justify;
  }
   .img-icon{
       position: absolute;
@@ -219,9 +222,37 @@
   margin-top:50px;
   line-height: 1;
 }
-
-
-
+.t_finca{
+  margin-top:20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+.t_entrada{
+  font-size:1.4em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.cont-producto{
+  margin-top:5px;
+  margin-left:20px;
+}
+.t_producto{
+  font-size:1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.t_d_producto{
+   font-size:1em;
+}
+.carta-info{
+  overflow-y: auto;
+  height: 250px;
+  width: 100%;
+  z-index:3;
+  -webkit-box-shadow: 5px 5px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 17px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 17px 0px rgba(0,0,0,0.75);
+}
 #SUELO .H_INFO{
   background-color:#B5E252;
   margin-top:5px;

@@ -15,6 +15,7 @@ export class Finca{
     cacao?:string;
     diseno_finca?:string;
     activo:boolean=false;
+    perfil_sensorial?:string;
       constructor(public http:HttpClient){
 
       }
@@ -24,5 +25,12 @@ export class Finca{
     }
     ConsultarFinca(cod):Promise<any>{
         return this.http.get<any>(Config.host+'/consultarfincas/'+cod).toPromise();
+    }
+    ConsultarPerfilSensorial(cod):Promise<any>{
+     
+        return this.http.get<any>(Config.host+'/consultarperfilsensorial/'+cod).toPromise();
+    }
+    ConsultarProduccion(cod,tipo):Promise<any>{
+        return this.http.get<any>(Config.host+'/consultarproduccion/'+cod+'&&'+tipo).toPromise();
     }
 }
