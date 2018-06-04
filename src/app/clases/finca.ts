@@ -1,7 +1,7 @@
 import{HttpClient,HttpHeaders} from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import {Config} from './config'
-
+@Injectable()
 export class Finca{
     codigo_finca?:string;
     nombre_finca:string;
